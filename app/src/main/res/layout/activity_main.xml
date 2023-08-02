@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5F6CB3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:shadowColor="#411B85"
+        android:text="EcoEnergy - J"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#F5EFF6"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <LinearLayout
+        android:layout_width="349dp"
+        android:layout_height="503dp"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulario"
+            android:textAlignment="center"
+            android:textColor="#00BCD4"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="text"
+            android:textColorHint="#FFC107"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Direccion"
+            android:inputType="text"
+            android:textColorHint="#FFEB3B"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Telefono"
+            android:inputType="phone"
+            android:textColorHint="#FFEB3B"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/txtCorreoE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Correo Electronico"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#FFC107"
+            android:textSize="24sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbCasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Casa"
+                android:textColor="#8BC34A"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rbGranja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Granja"
+                android:textColor="#4CAF50"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/rbApartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apartamento"
+                android:textColor="#4CAF50"
+                android:textSize="20sp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chPsolar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Paneles Solares"
+                    android:textColor="#F44336"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/chAegen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Aerogeneradores"
+                    android:textColor="#F44336"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/chOtros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otros sistemas de energia renovable"
+            android:textColor="#F44336"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DF9B37"
+            android:text="Enviar"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/logotodosalau"
+        tools:layout_editor_absoluteX="117dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
