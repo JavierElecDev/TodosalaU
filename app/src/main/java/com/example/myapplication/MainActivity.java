@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Sleccionaste Apartamento", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
     public void Comprobar(){
@@ -99,5 +101,28 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog titulo = OjoManito.create();
         titulo.setTitle("Has ingresado:");
         titulo.show();
+
+        if(Psolar.isChecked() && Aegen.isChecked() && Otros.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Psolar.getText() + " y "
+                    + Aegen.getText() + " y " + Otros.getText(), Toast.LENGTH_SHORT).show();
+        }else if(Psolar.isChecked() && Otros.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Psolar.getText() + " y "
+                    + Otros.getText(), Toast.LENGTH_SHORT).show();
+        }else if(Aegen.isChecked() && Otros.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Aegen.getText() + " y "
+                    + Otros.getText(),Toast.LENGTH_SHORT).show();
+        }else if(Psolar.isChecked() && Aegen.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Psolar.getText() + " y "
+                    + Aegen.getText(),Toast.LENGTH_SHORT).show();
+        }else if(Psolar.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Psolar.getText(),
+                    Toast.LENGTH_SHORT).show();
+        }else if(Aegen.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Aegen.getText(),
+                    Toast.LENGTH_SHORT).show();
+        }else if(Otros.isChecked()){
+            Toast.makeText(MainActivity.this, "Sleccionaste: " + Otros.getText(),
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 }
